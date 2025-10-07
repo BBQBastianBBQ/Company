@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e8bfb42b-9d30-42a5-9e0a-6d68b2b46324" name="company-linux" url="http://www.company.bastian.web.bbq">
+        <fileTransfer rootFolder="/var/www/company" accessType="SFTP" host="www.bastian.web.bbq" port="22" sshConfigId="2680bd99-b9dd-4dcd-b433-fa1248d3c0e8" sshConfig="bstnhgdrn@www.bastian.web.bbq:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" isUseSudo="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

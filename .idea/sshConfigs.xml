@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="www.bastian.web.bbq" id="2680bd99-b9dd-4dcd-b433-fa1248d3c0e8" port="22" nameFormat="DESCRIPTIVE" username="bstnhgdrn" useOpenSSHConfig="true" />
+    </configs>
+  </component>
+</project>
