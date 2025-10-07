@@ -1,0 +1,88 @@
+.img  {
+    border: 20px solid transparent; /* Required for border-image */
+    padding: 15px;
+    border-image: url(alienborder2.bmp) 30 round;
+    margin-left:100px;
+    margin-right:100px;
+    margin-bottom:20px;
+    width: 70%;
+    height:70%;
+
+}
+.body {
+    font-family:Bahnschrift;
+    background-color: black;
+    margin: 20px;
+}
+h1   {color: blue;
+    margin-left:20%;
+    margin-right:20%;
+}
+p1   {color:darkseagreen}
+p    {color: #FFFB25;}
+li   {color: whitesmoke;
+
+}
+a    {margin-left:20%;
+    color: lime;}
+
+.intro  {background-color:blue;
+    border-width:4px;
+    border-style:solid;
+    border-color: #faf9fa;
+    border-radius:10px;
+    color:white;
+    padding:10px;
+    margin-left:100px;
+    margin-right:100px;
+    margin-bottom:20px;
+}
+
+.table
+{   margin-left:100px;
+    margin-right:100px;
+
+}
+.trow1
+{   color: yellowgreen;
+    background-color: blue;
+    border-style: dot-dash;
+    border-color: crimson;
+
+}
+
+.trow2
+{   color: blue;
+    background-color: yellowgreen;
+    border-style: dot-dash;
+    border-color: crimson;
+}
+
+.te
+{   color: blue;
+}
+.form {
+    background-color: #7171be;
+    border-width: 4px;
+    border-style: solid;
+    border-color: #b90d7e;
+    border-radius: 10px;
+    color: white;
+    padding: 20px;
+    margin-left: 20%;
+    margin-right: 40%;
+    margin-bottom: 20px;
+}
+.listen
+{
+    background-color: #4f4f52;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #0a66ec;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+}

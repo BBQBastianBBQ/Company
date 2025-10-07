@@ -12,7 +12,7 @@ $stmt->execute();
 <head>
     <meta charset="UTF-8" http-equiv="refresh" content="0; url= read_department.php">
     <title>Title</title>
-    <link rel="stylesheet" href="http://www.bastian.web.bbq/mystyle.css" type="text/css">
+    <link rel="stylesheet" href="DepartmentCSS.css?v=<?php echo time(); ?>" type="text/css">
 
 
 </head>
