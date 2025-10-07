@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET'){
 
     <body class='body'>
 
-    <h1> NEUE DEPARTMENTS ERSTELLEN</h1><br>
+    <h1> DEPARTMENT UPDATEN</h1><br>
 
     <div class='form'>
         <form action='' method='post'>
@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET'){
             <input type="submit" value="abschicken">
         </form>
     </div>
-    <p><a href="../read_department.php">hhier geht es zur Tabelle</a></p>
+    <p><a href="../read_department.php">hier geht es zur Tabelle</a></p>
     <br>
     <p><a href="http://www.bastian.web.bbq/index.php">hier gehts zurück zu meiner Seite</a></p>
 
@@ -46,5 +46,11 @@ elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bindParam(':name', $name);
 
     $stmt->execute();
+    ?>
+    <html>
+    <head>
+        <meta charset="UTF-8" http-equiv="refresh" content="0; url= read_department.php">
+    </head>
+    </html> <?php
 }
 ?>
