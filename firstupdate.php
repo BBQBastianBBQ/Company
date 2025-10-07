@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="mystyle.css?v=<?php echo time(); ?>" type="text/css">
+    <link rel="stylesheet" href="http://www.bastian.web.bbq/mystyle.css?v=<?php echo time(); ?>" type="text/css">
 
     <!-- WICHTIG: man muss für Firefox in die CSS Info eine Instanz einbauen, die dafür sorgt, dass der Browser
      nicht die im Cache gespeicherte .CSS Datei nutzt, sondern immer die neuste Version lädt, sonst werden Veränderungen

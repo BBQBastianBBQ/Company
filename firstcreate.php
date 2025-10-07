@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET'){
     <head>
         <meta charset="UTF-8">
         <title>Title</title>
-        <link rel="stylesheet" href="mystyle.css?v=<?php echo time(); ?>" type="text/css">
+        <link rel="stylesheet" href="http://www.bastian.web.bbq/mystyle.css?v=<?php echo time(); ?>" type="text/css">
 
         <!-- WICHTIG: man muss für Firefox in die CSS Info eine Instanz einbauen, die dafür sorgt, dass der Browser
          nicht die im Cache gespeicherte .CSS Datei nutzt, sondern immer die neuste Version lädt, sonst werden Veränderungen
@@ -34,8 +34,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET'){
     <input type="submit" value="abschicken">
 </form>
 </div>
+<p><a href="../firstread.php">hhier geht es zur Tabelle</a></p>
 <br>
-<p><a href="../ersteseite.php">hier gehts zurück zu meiner Seite</a></p>
+<p><a href="http://www.bastian.web.bbq/index.php">hier gehts zurück zu meiner Seite</a></p>
 
 </body>
 </html>
