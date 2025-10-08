@@ -3,13 +3,20 @@ function createTable(array $data, array|false $ueberschriften=false,string $clas
 { $length= count($data);
     echo "<table class='$class_1'>";
     echo"<tr>";
+
+    // mit dem folgenden Loop erzeuge ich die Überschriften der Tabelle:
+
     foreach(array_keys($data[0]) as $x=>$y)
 
     {
         echo "<th class='$class_2'>","$y","</th>";
     }   echo "</tr>";
 
+    // hier beginnt der Loop, der durch die gesamte Länge des arrays durch iteriert
     for ($i = 0; $i <= $length-1; $i++){
+
+        // hier ist der Teil der Funktion der dafür sorgt, dass die Reihen der Tabelle unterschiedliche Farben haben:
+
         if ($i%2 == 0) {
             echo"<tr class='$class_3'>";}
         else
@@ -34,7 +41,7 @@ function createTable(array $data, array|false $ueberschriften=false,string $clas
 
 
 }
-$id=$_GET['id'];
+// $id=$_GET['id'];
 $conn = new PDO('mysql:host=localhost;dbname=company','bstnremo','X1dl§eAA7');
 $sql='SELECT * FROM Department';
 $stmt = $conn->prepare($sql);
@@ -59,13 +66,20 @@ $array=$stmt->fetchAll(PDO::FETCH_ASSOC);
 </head>
 <body class="body">
 
-
-<?php
+<div class="bodydiv">
+    <div class="tablediv">
+    <?php
 echo (createTable($array,false,"table", "te","trow1","trow2"));
 ?>
-<br>
-<p><a href="../firstcreate.php">hier können neue Angestellt*innen eingetragen werden</a></p>
-<br>
-<p><a href="../ersteseite.php">hier gehts zurück zu meiner Webseite</a></p>
+    </div>
+    <br>
+    <div class="lynx">
+<p><a href="../create_department.php">Neue Departments eingetragen</a></p>
+    </div>
+        <div class="lynx">
+<p><a href="../ersteseite.php">zurück zur Startseite</a></p>
+        </div>
+</div>
 </body>
+
 </html>
