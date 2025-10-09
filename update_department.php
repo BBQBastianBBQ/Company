@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET'){
        und keine Namens-Aktualisierung stattfindet! */
 
 
-    var_dump($result);
+
     ?>
 
     <html lang="en">
@@ -39,11 +39,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET'){
 
     <div class='form'>
         <form action='' method='post'>
-            <input type="text" name="name" placeholder="<?php  echo $result['name']?>" value="<?php echo $result['name']?>"/>
+           <div> <input type="text" name="name" placeholder="<?php  echo $result['name']?>" value="<?php echo $result['name']?>"/>
+           </div>
 
             <!-- die Werte aus dem erzeugten Array werden als default gesetzt -->
 
-            <p>Hiring? <input type="checkbox" name="yes" value="1" /></p>
+            <p>Hiring? <input type="checkbox" name="yes" value="1" /> <label>YES </label> </p>
+            <input type="radio"  name="workmode" value="Onsite"  />
+            <label>Onsite</label>
+            <input type="radio"  name="workmode" value="Remote"  />
+            <label>Remote</label>
+            <input type="radio"  name="workmode" value="Hybrid"  />
+                <label>Hybrid</label>
+            <br><br>
             <input type="submit" value="abschicken">
         </form>
     </div>
@@ -51,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET'){
     <p><a href="../read_department.php">hier geht es zur Tabelle</a></p>
     </div>
     <div class="lynx">
-    <p><a href="http://www.bastian.web.bbq/index.php">hier gehts zurück zu meiner Seite</a></p>
+    <p><a href="/index.php">zurück zur Startseite</a></p>
     </div>
     </div>
     </body>
@@ -64,13 +72,15 @@ elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id=$_GET['id'];
     $name = $_POST['name'];
     $hire = $_POST['yes'] ?? 0 ;
+    $workmode = $_POST['workmode'];
 
     $conn = new PDO('mysql:host=localhost;dbname=company', 'bstnremo', 'X1dl§eAA7');
-    $sql2 = 'UPDATE Department SET name=:name,hiring=:hiring  WHERE id=:id';
+    $sql2 = 'UPDATE Department SET name=:name,hiring=:hiring,workmode=:workmode  WHERE id=:id';
     $stmt = $conn->prepare($sql2);
     $stmt->bindParam(':id',$id);
     $stmt->bindParam(':name', $name);
     $stmt->bindParam(':hiring', $hire);
+    $stmt->bindParam(':workmode', $workmode);
 
     $stmt->execute();
     ?>

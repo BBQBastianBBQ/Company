@@ -10,3 +10,7 @@ CREATE TABLE Department(
 USE company;
 ALTER TABLE Department
     ADD hiring tinyint;
+
+USE company;
+ALTER TABLE Department
+    ADD workmode varchar(255);
