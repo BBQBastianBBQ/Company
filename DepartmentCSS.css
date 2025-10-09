@@ -11,11 +11,13 @@
 }
 .body {
     font-family:Bahnschrift;
-    background-color: black;
+    background-color: #a69d9d;
     margin: 20px;
+    height: 90vh;
+
 }
 h1   {color: blue;
-    margin-left:20%;
+    margin-left:25%;
     margin-right:20%;
 }
 p1   {color:darkseagreen}
@@ -23,8 +25,8 @@ p    {color: #FFFB25;}
 li   {color: whitesmoke;
 
 }
-a    {margin-left:20%;
-    color: lime;}
+a    {margin-left:70px;
+    color: #182e28;}
 
 .intro  {background-color:blue;
     border-width:4px;
@@ -39,38 +41,51 @@ a    {margin-left:20%;
 }
 
 .table
-{   margin-left:100px;
-    margin-right:100px;
+{   margin-left:5%;
+    margin-right:5%;
+    margin-bottom: 20px;
 
 }
+
+td,th {border-width: 2px;
+    border-radius: 6px;
+    border-style: solid;
+    border-color: #2c302f;}
 .trow1
-{   color: yellowgreen;
-    background-color: blue;
-    border-style: dot-dash;
-    border-color: crimson;
+{   color: rgb(154, 205, 50);
+    background-color: rgba(0, 13, 255, 0.69);
+    a{color: #aab9cf
+    }
+
 
 }
 
 .trow2
 {   color: blue;
     background-color: yellowgreen;
-    border-style: dot-dash;
-    border-color: crimson;
+    a{color: #0c56c0
+    }
+
+
 }
 
-.te
+.th1
 {   color: blue;
+    background-color: #b8ff39;
+    height: 40px;
+    width: 20%;
+
 }
 .form {
-    background-color: #7171be;
+    background-color: #89929e;
     border-width: 4px;
     border-style: solid;
-    border-color: #b90d7e;
+    border-color: #ffffff;
     border-radius: 10px;
-    color: white;
+    color: #ffffff;
     padding: 20px;
     margin-left: 20%;
-    margin-right: 40%;
+    margin-right: 30%;
     margin-bottom: 20px;
 }
 .listen
@@ -85,4 +100,49 @@ a    {margin-left:20%;
     margin-left: 100px;
     margin-right: 100px;
     margin-bottom: 20px;
+}
+
+.lynx{
+    background-color: #c3c3e5;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #182e28;
+    border-radius: 10px;
+    margin-left: 20%;
+    margin-right: 30%;
+    margin-bottom: 2px;
+    padding: 1px;
+}
+
+.bodydiv{
+    background-color: #333337;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #d9fff5;
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-right: 25%;
+    margin-bottom: 20%;
+    padding: 20px;
+}
+
+.tablediv{
+    background-color: #b2b1b1;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #ffffff;
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2px;
+    padding: 1px;
+}
+
+.button{
+    margin: 2px;}
+
+.th2{   color: #49dcc1;
+    background-color: #395900;
+
+
 }

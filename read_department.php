@@ -1,5 +1,5 @@
 <?php
-function createTable(array $data, array|false $ueberschriften=false,string $class_1, string $class_2,string $class_3,string $class_4)
+function createTable(array $data, array|false $ueberschriften=false,string $class_1, string $class_2,string $class_3,string $class_4,string $class_5)
 { $length= count($data);
     echo "<table class='$class_1'>";
     echo"<tr>";
@@ -10,7 +10,7 @@ function createTable(array $data, array|false $ueberschriften=false,string $clas
 
     {
         echo "<th class='$class_2'>","$y","</th>";
-    }   echo "</tr>";
+    }   echo "<th class='$class_5'>Department entfernen</th><th class='$class_5'>Department aktualisieren</th></tr>";
 
     // hier beginnt der Loop, der durch die gesamte Länge des arrays durch iteriert
     for ($i = 0; $i <= $length-1; $i++){
@@ -27,13 +27,18 @@ function createTable(array $data, array|false $ueberschriften=false,string $clas
         // in diesem Fall ist der benötigte Schlüsselwert die Spalte Id in der Tabelle (ich weiß, dass die Schlü.St. == [0] ist
         foreach ($var1 as $inhalt) {
             if ($loop == 0)                 // ich kann durch die Zahl eine bestimmte Stelle im Array bestimmen, die ausgewählt werden soll
-                $id=$inhalt;                    // hier füge ich den wert von inhalt der benötigten Variable zu
+            {$id=$inhalt;}                // hier füge ich den wert von value=$inhalt der benötigten Variable zu
+            if ($loop == 2) {
+                if ($inhalt == 1){$inhalt = "hiring!";}
+                else{$inhalt="not hiring";}}
             echo "<td>", $inhalt, "</td>";
+
+
             $loop ++;
 
         }
-        echo "<td><a href='/delete_department.php?id=$id'>delete</a></td>";  // ?id=$id fügt dem $_GET array den Wert zu der in der Variable steht
-        echo  "<td><a href='/update_department.php?id=$id'>update</a></td>";
+        echo "<td><a href='/delete_department.php?id=$id'>del</a></td>";  // ?id=$id fügt dem $_GET array den Wert zu der in der Variable steht
+        echo  "<td><a href='/update_department.php?id=$id'>up</a></td>";
         echo "</tr>","\n";
 
     }
@@ -56,7 +61,7 @@ $array=$stmt->fetchAll(PDO::FETCH_ASSOC);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>DEPARTMENT LISTE</title>
     <link rel="stylesheet" href="DepartmentCSS.css?v=<?php echo time(); ?>" type="text/css">
 
     <!-- WICHTIG: man muss für Firefox in die CSS Info eine Instanz einbauen, die dafür sorgt, dass der Browser
@@ -67,17 +72,19 @@ $array=$stmt->fetchAll(PDO::FETCH_ASSOC);
 <body class="body">
 
 <div class="bodydiv">
+    <h1>DEPARTMENT LISTE</h1>
     <div class="tablediv">
+        <br>
     <?php
-echo (createTable($array,false,"table", "te","trow1","trow2"));
+echo (createTable($array,false,"table", "th1","trow1","trow2","th2"));
 ?>
     </div>
     <br>
     <div class="lynx">
-<p><a href="../create_department.php">Neue Departments eingetragen</a></p>
+<p><a href="../create_department.php">Neue Departments eintragen</a></p>
     </div>
         <div class="lynx">
-<p><a href="../ersteseite.php">zurück zur Startseite</a></p>
+<p><a href="/index.php">zurück zur Startseite</a></p>
         </div>
 </div>
 </body>
